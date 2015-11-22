@@ -21,6 +21,7 @@
 /*****************************************/
 #include <stdlib.h>
 #include <stdio.h>
+#include <time.h>
 #define N 2
 
 /**************************************/
@@ -67,26 +68,29 @@ int main (){
   int i;
   int *s1, *s2;
 
-  
+  // Zufallsgenerator
+  //  time_t t;
+
+  //time(&t);
+  srand(time (NULL)); 
+
+  // Kommentar des Programms
   printf("Dieses Programm ist in 4 Teil Programme augespalten:\nMit den Arrays wird ein Skalarprodukt erzeugt, eine Matrix addition und eine Matrix multiplikation,\n");
 
-  printf("Bitte geben Sie die Werte für den ersten Array an:");
   // Einlesen des Arrays über stdin
-  for ( i = 0; i < N; i++){
-    scanf("%d", &skalar1[i]);
-  }
-  
-  /*
-  for ( i = 0; i < N; i++){
-    fgets ( c, i, stdin);
-    skalar[i] = strtol ( c, *p, i);
-  }
-  */
-  printf("Bitte geben Sie die Werte für den zweiten Array an:");
 
-  // Einlesen des Arrays über stdin
+  printf("Die Einzelwerte des Arrays1 sind:\n");
   for ( i = 0; i < N; i++){
-    scanf("%d", &skalar2[i]);
+    skalar1[i] = ( rand() % 100 +1);
+    printf("skalar1[%d]\t%d\n", i, skalar1[i]);
+  }
+
+
+  // Einlesen des Arrays über stdin  
+  printf("Die Einzelwerte des Arrays2 sind:\n");
+  for ( i = 0; i < N; i++){
+    skalar2[i] = ( rand() % 100 + 1);
+    printf("skalar2[%d]\t%d\n", i, skalar2[i]);
   }          
   
   /*
@@ -135,12 +139,12 @@ int main (){
   int matpr1[N][N], matpr2[N][N], mat_erg[N][N];
   //  int *p1, *p2;
   int j;
-  
-  printf("Bitte geben sie die Zahlen der zu berechnenden matrize1 an:\n");
+
+  // automatisches befüllen des Arrays
+  printf("Die Zahlen werden automatisch befüllt:\n");
   for ( i = 0; i < N; i++){
     for ( j = 0; j < N; j++){
-      printf("Matrize[%d][%d]\t", i, j);
-      scanf("%d", &matpr1[i][j]);
+      matpr1[i][j] = (rand() % 100+1);
     }
   }
 
@@ -150,12 +154,11 @@ int main (){
     }
   }
 
-  // Eingabe zweiwertiges Array 
-  printf("Bitte geben sie die Zahlen der zu berechnenden matrize2 an:\n");
+  // automatisches befüllen des Arrays
+  printf("Die Zahlen werden automatisch befüllt:\n");
   for ( i = 0; i < N; i++){
     for ( j = 0; j < N; j++){
-      printf("Matrize[%d][%d]\t", i, j);
-      scanf("%d", &matpr2[i][j]);
+      matpr2[i][j] = (rand() % 100+1);
     }
   }
 
