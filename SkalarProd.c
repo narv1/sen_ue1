@@ -68,17 +68,13 @@ int main (){
   int i;
   int *s1, *s2;
 
-  // Zufallsgenerator
-  //  time_t t;
-
-  //time(&t);
+  // initialisierung des Zufallsgenerator 
   srand(time (NULL)); 
 
   // Kommentar des Programms
   printf("Dieses Programm ist in 4 Teil Programme augespalten:\nMit den Arrays wird ein Skalarprodukt erzeugt, eine Matrix addition und eine Matrix multiplikation,\n");
 
-  // Einlesen des Arrays über stdin
-
+  // Zufallszahlen generieren und speichern | Ausgabe
   printf("Die Einzelwerte des Arrays1 sind:\n");
   for ( i = 0; i < N; i++){
     skalar1[i] = ( rand() % 100 +1);
@@ -86,20 +82,13 @@ int main (){
   }
 
 
-  // Einlesen des Arrays über stdin  
+  // Zufallszahlen generieren und speichern | Ausgabe
   printf("Die Einzelwerte des Arrays2 sind:\n");
   for ( i = 0; i < N; i++){
     skalar2[i] = ( rand() % 100 + 1);
     printf("skalar2[%d]\t%d\n", i, skalar2[i]);
   }          
   
-  /*
-  for ( i = 0; i < N; i++){
-    printf("skalar1:%d\n", skalar1[i]);
-  }
-  printf("\n");
-  */
-
   /**************************************/
   /*  pointer übergabe von einlesewert  */
   /*    Aufruf der Multiplikation       */
@@ -137,7 +126,6 @@ int main (){
   }
 
   int matpr1[N][N], matpr2[N][N], mat_erg[N][N];
-  //  int *p1, *p2;
   int j;
 
   // automatisches befüllen des Arrays
