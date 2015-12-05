@@ -48,7 +48,7 @@
   pdfauthor={Fabian Nedoluha, Stefan Hermeter},
 }
 \begin{document}
-\title{\mytitle:SkalarPro}
+\title{\mytitle:Arrays und Strings}
 \subtitle{String verarbeitung}
 \date{\today}
 \author{Stefan Hermeter \texttt{\href{mailto:stefan.hermeter@gmx.at}{stefan.hermeter@gmx.at}}\\
@@ -63,40 +63,73 @@
 \newpage
 \pagenumbering{arabic}
 \section{Aufgabenstellung}
+\subsection{Erster Teil}
+Schreiben Sie ein Programm namens SkalarProd, welches das Skalarprodukt zweier n-dimensionaler Vektoren berechnet, welches die Summe zweier Matrizen bildet und welches eine nxm- und eine mxn-Matrix multipliziert\\
 
-\subsection{Ausgabe}
+\subsection{Zweiter Teil}
+Erstellen Sie eine eigene String-Bibliothek mit dem Namen 'myString.h'. Erstellen Sie ein Programm myStrings.c für das Testen der Funktionen mit entsprechenden Ein- und Ausgabeoperationen. Es sollen alle Funktionen bzw. deren richtige Funktionalität sichtbar sein
 
 \section{Programmablaufplan}
-\subsection{Schema Programmablauf}
+\subsection{Erster Teil: Schema Programmablauf}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\linewidth]{images/Flussdiagramm.eps}
+  \includegraphics[width=0.8\linewidth]{images/Flussdiagramm_erster_teil.eps}
   \caption{Programmablauf}
   \label{fig:digraph}
 \end{figure}
+\subsection{Zweiter Teil: Schema Programmablauf}
+%%\begin{figure}[H]
+%%  \centering
+%%  \includegraphics[width=0.8\linewidth]{images/Flussdiagramm.eps}
+%%  \caption{Programmablauf}
+%%  \label{fig:digraph}
+%%\end{figure}
 
 %% Resourcen | Libraries
-\section{Resourcen}
-
-\subsection{Sourcecode-Files}
+\section{Resourcen Erster Teil}
+\subsection{Erster Teil}
+\subsubsection{Sourcecode-Files}
 \begin{itemize}
 \item SkalarProd.c
+\item test\_prog.c
 \end{itemize}
 
-\subsection{Verwendete Libraries}
+\subsubsection{Verwendete Libraries}
 \begin{itemize}
 \item stdio.h
 \item stdlib.h
+\item time.h
+\end{itemize}
+
+\subsection{Zweiter Teil}
+\subsubsection{Sourcecode-Files}
+\begin{itemize}
+\item test\_prog.c
+\end{itemize}
+
+\subsubsection{Verwendete Libraries}
+\begin{itemize}
+\item stdio.h
+\item stdlib.h
+\item myString.h
 \end{itemize}
 
 %% Testergebnisse 
 \section{Testergebnisse}
-\subsection{Ausgabe}
+
+\subsection{Test: Erster Teil}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\linewidth]{images/ausgabe1.png}
+  \includegraphics[width=0.9\linewidth]{images/test1.png}
   \caption{Ausgabe}
   \label{fig:digraph}
-\end{figure} 
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{images/test2.png}
+  \caption{Ausgabe}
+  \label{fig:digraph}
+\end{figure}
 
 \end{document}
